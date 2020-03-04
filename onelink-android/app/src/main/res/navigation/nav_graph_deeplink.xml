@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_deeplink"
+    app:startDestination="@id/shop_menu_fragment">
+    <fragment
+        android:id="@+id/shop_menu_fragment"
+        android:name="com.appsflyer.liazkamper.onelink_android.shop_menu"
+        android:label="fragment_shop_menu"
+        tools:layout="@layout/fragment_shop_menu">
+        <action
+            android:id="@+id/action_shop_menu2_to_shoes_section2"
+            app:destination="@id/shoes_section_fragment" />
+        <action
+            android:id="@+id/action_shop_menu2_to_jeans_section2"
+            app:destination="@+id/jeansGraph" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoes_section_fragment"
+        android:name="com.appsflyer.liazkamper.onelink_android.shoes_section"
+        android:label="fragment_shoes_section"
+        tools:layout="@layout/fragment_shoes_section" />
+    <navigation android:id="@+id/jeansGraph" app:startDestination="@id/jeans_section_fragment">
+        <fragment
+            android:id="@+id/jeans_section_fragment"
+            android:name="com.appsflyer.liazkamper.onelink_android.jeans_section"
+            android:label="fragment_jeans_section"
+            tools:layout="@layout/fragment_jeans_section" >
+            <action
+                android:id="@+id/action_jeans_section_fragment_to_jeans_men"
+                app:destination="@id/jeans_men_section_fragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/jeans_men_section_fragment"
+            android:name="com.appsflyer.liazkamper.onelink_android.jeans_men"
+            android:label="fragment_jeans_men"
+            tools:layout="@layout/fragment_jeans_men" />
+    </navigation>
+</navigation>

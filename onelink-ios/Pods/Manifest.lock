@@ -1,0 +1,16 @@
+PODS:
+  - AppsFlyerFramework (5.1.0)
+
+DEPENDENCIES:
+  - AppsFlyerFramework
+
+SPEC REPOS:
+  trunk:
+    - AppsFlyerFramework
+
+SPEC CHECKSUMS:
+  AppsFlyerFramework: b5e6d0d1718c445eeb151769e97246c00ae4628d
+
+PODFILE CHECKSUM: 2983b7776c00c1a5e9c7bc2eff99cdb6694e8379
+
+COCOAPODS: 1.8.4

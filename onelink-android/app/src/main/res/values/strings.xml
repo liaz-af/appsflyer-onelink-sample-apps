@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">onelink-android</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="welcome_to_shop">Welcome to our shop</string>
+    <string name="shop_shoes">Shop Shoes</string>
+    <string name="shop_jeans">Shop Jeans</string>
+    <string name="shop_jeans_men">Shop Men\'s Jeans</string>
+
+</resources>
