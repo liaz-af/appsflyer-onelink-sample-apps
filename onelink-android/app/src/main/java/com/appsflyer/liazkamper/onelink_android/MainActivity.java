@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
                 for (String attrName : conversionData.keySet()) {
                     Log.d("AppsFlyer_LOG_TAG", "attribute: " + attrName + " = " + conversionData.get(attrName));
+
                 }
             }
 
@@ -73,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("AppsFlyer_LOG_TAG", "error onAttributionFailure : " + errorMessage);
             }
         };
-
 
         AppsFlyerLib.getInstance().init(AF_DEV_KEY, conversionListener, this);
     }

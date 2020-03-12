@@ -50,9 +50,9 @@ public class jeans_men extends Fragment implements View.OnClickListener {
         blueBtn.setOnClickListener(this);
         saleBtn.setOnClickListener(this);
 
-        String itemId = requireArguments().getString("item_id");
-        if (itemId != null) {
-            Log.d("AppsFlyer_LOG_TAG", "Deep link into Men Jeans");
+        if (getArguments() != null) {
+            String itemId = requireArguments().getString("item_id");
+                Log.d("AppsFlyer_LOG_TAG", "Deep link into Men Jeans");
 
             switch (itemId) {
                 case "black":
