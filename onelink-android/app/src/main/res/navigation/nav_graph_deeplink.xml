@@ -30,11 +30,19 @@
             <action
                 android:id="@+id/action_jeans_section_fragment_to_jeans_men"
                 app:destination="@id/jeans_men_section_fragment" />
+            <action
+                android:id="@+id/action_jeans_section_fragment_to_jeans_women"
+                app:destination="@id/jeans_women_section_fragment" />
         </fragment>
         <fragment
             android:id="@+id/jeans_men_section_fragment"
             android:name="com.appsflyer.liazkamper.onelink_android.jeans_men"
             android:label="fragment_jeans_men"
             tools:layout="@layout/fragment_jeans_men" />
+        <fragment
+            android:id="@+id/jeans_women_section_fragment"
+            android:name="com.appsflyer.liazkamper.onelink_android.jeans_women"
+            android:label="fragment_jeans_women"
+            tools:layout="@layout/fragment_jeans_women" />
     </navigation>
 </navigation>

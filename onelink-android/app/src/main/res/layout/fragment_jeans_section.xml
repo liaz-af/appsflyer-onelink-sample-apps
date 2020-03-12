@@ -9,6 +9,7 @@
     tools:context=".jeans_section">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:id="@+id/jeans_label"
         android:layout_width="0dp"
@@ -20,17 +21,31 @@
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/men_jeans_button"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="200dp"
+        android:layout_height="wrap_content"
         android:text="@string/shop_jeans_men"
-        app:layout_constraintBottom_toBottomOf="@+id/jeans_label"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/jeans_label"
+        app:layout_constraintVertical_bias="0.598" />
+
+    <Button
+        android:id="@+id/women_jeans_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/shop_jeans_women"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/men_jeans_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

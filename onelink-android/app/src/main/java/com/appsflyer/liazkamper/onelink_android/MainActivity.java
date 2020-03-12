@@ -51,9 +51,18 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("AppsFlyer_LOG_TAG","Deep linking into " + conversionData.get("af_sub1"));
                 String targetSectionTag = conversionData.get("af_sub1") + "_section_fragment";
                 int targetId = getResources().getIdentifier(targetSectionTag, "id", getPackageName());
-                PendingIntent pendingIntent = navController.createDeepLink().setGraph(R.navigation.nav_graph_deeplink).setDestination(targetId).createPendingIntent();
+
+                Bundle dp_args = new Bundle();
+                dp_args.putString("item_id", conversionData.get("item_id"));
+
+                PendingIntent pendingIntent = navController.createDeepLink().
+                                                setGraph(R.navigation.nav_graph_deeplink).
+                                                setDestination(targetId).
+                                                setArguments(dp_args).
+                                                createPendingIntent();
                 try {
                     pendingIntent.send();
+                    finish();
                 } catch (PendingIntent.CanceledException e) {
                     e.printStackTrace();
                 }
