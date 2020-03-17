@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,7 +5,7 @@
     app:startDestination="@id/shop_menu_fragment">
     <fragment
         android:id="@+id/shop_menu_fragment"
-        android:name="com.appsflyer.liazkamper.onelink_android.shop_menu"
+        android:name="com.appsflyer.liazkamper.onelink_android.ShopMenu"
         android:label="fragment_shop_menu"
         tools:layout="@layout/fragment_shop_menu">
         <action
@@ -18,15 +17,17 @@
     </fragment>
     <fragment
         android:id="@+id/shoes_section_fragment"
-        android:name="com.appsflyer.liazkamper.onelink_android.shoes_section"
+        android:name="com.appsflyer.liazkamper.onelink_android.ShoesSection"
         android:label="fragment_shoes_section"
         tools:layout="@layout/fragment_shoes_section" />
-    <navigation android:id="@+id/jeansGraph" app:startDestination="@id/jeans_section_fragment">
+    <navigation
+        android:id="@+id/jeansGraph"
+        app:startDestination="@id/jeans_section_fragment">
         <fragment
             android:id="@+id/jeans_section_fragment"
-            android:name="com.appsflyer.liazkamper.onelink_android.jeans_section"
+            android:name="com.appsflyer.liazkamper.onelink_android.JeansSection"
             android:label="fragment_jeans_section"
-            tools:layout="@layout/fragment_jeans_section" >
+            tools:layout="@layout/fragment_jeans_section">
             <action
                 android:id="@+id/action_jeans_section_fragment_to_jeans_men"
                 app:destination="@id/jeans_men_section_fragment" />
@@ -36,12 +37,12 @@
         </fragment>
         <fragment
             android:id="@+id/jeans_men_section_fragment"
-            android:name="com.appsflyer.liazkamper.onelink_android.jeans_men"
+            android:name="com.appsflyer.liazkamper.onelink_android.JeansMen"
             android:label="fragment_jeans_men"
             tools:layout="@layout/fragment_jeans_men" />
         <fragment
             android:id="@+id/jeans_women_section_fragment"
-            android:name="com.appsflyer.liazkamper.onelink_android.jeans_women"
+            android:name="com.appsflyer.liazkamper.onelink_android.JeansWomen"
             android:label="fragment_jeans_women"
             tools:layout="@layout/fragment_jeans_women" />
     </navigation>

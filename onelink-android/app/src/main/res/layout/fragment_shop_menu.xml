@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_light"
     android:gravity="center"
-    tools:context=".shop_menu">
+    tools:context=".ShopMenu">
 
     <TextView
         android:id="@+id/shop_welcome_label"
