@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00BCD4"
     android:orientation="vertical"
-    tools:context=".jeans_men" >
+    tools:context=".JeansMen">
 
     <TextView
         android:id="@+id/textView"
@@ -14,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/shop_jeans_men"
-        android:textColor="@android:color/black"
         android:textAlignment="center"
+        android:textColor="@android:color/black"
         android:textSize="36sp" />
 
     <LinearLayout
@@ -33,8 +31,8 @@
             android:layout_marginEnd="10dp"
             android:background="@android:color/black"
             android:text="@string/black"
-            android:textSize="25sp"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/men_blue_button"
@@ -42,9 +40,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:textSize="25sp"
             android:background="@android:color/holo_blue_dark"
-            android:text="@string/blue" />
+            android:text="@string/blue"
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/men_sale_button"
@@ -52,11 +50,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:textSize="25sp"
             android:background="@android:color/holo_red_light"
             android:text="@string/sale"
-            android:textColor="@android:color/white" />
-
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
     </LinearLayout>
 
     <ImageView
