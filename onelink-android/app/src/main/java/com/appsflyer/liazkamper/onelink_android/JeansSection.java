@@ -25,5 +25,9 @@ public class JeansSection extends Fragment {
         view.<Button>findViewById(R.id.men_jeans_button)
                 .setOnClickListener(v -> Navigation.findNavController(view)
                         .navigate(R.id.action_jeans_section_fragment_to_jeans_men));
+
+        view.<Button>findViewById(R.id.women_jeans_button)
+                .setOnClickListener(v -> Navigation.findNavController(view)
+                        .navigate(R.id.action_jeans_section_fragment_to_jeans_women));
     }
 }
