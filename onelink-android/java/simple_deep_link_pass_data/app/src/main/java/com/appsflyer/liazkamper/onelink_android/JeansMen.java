@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,6 +26,7 @@ import static com.appsflyer.liazkamper.onelink_android.AppsflyerShopApp.LOG_TAG;
 public class JeansMen extends Fragment {
 
     private String currentChoice = "sale";
+    private final String username = "TheKing";
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -36,6 +38,10 @@ public class JeansMen extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        TextView usernameText = view.findViewById(R.id.usernameText);
+        usernameText.setText(username);
+
         ImageView jeansImage = view.findViewById(R.id.men_jeans_image);
         view.<Button>findViewById(R.id.men_black_button)
                 .setOnClickListener(v -> {
@@ -56,6 +62,11 @@ public class JeansMen extends Fragment {
                 .setOnClickListener(v -> inviteFriend());
         if (getArguments() != null) {
             Log.d(LOG_TAG, "Deep link into Men Jeans");
+            // Check if this deep link originiated in a user invite
+            if (getArguments().getString("referrer_name") != "") {
+                Toast.makeText(getActivity(),"You were invited by " + getArguments().getString("referrer_name"),
+                               Toast.LENGTH_SHORT).show();
+            }
             switch (getArguments().getString("item_id")) {
                 case "black":
                     jeansImage.setImageResource(R.drawable.black_jeans_men);
@@ -76,7 +87,7 @@ public class JeansMen extends Fragment {
     private void inviteFriend() {
         LinkGenerator linkGenerator = ShareInviteHelper.generateInviteUrl(getActivity());
         linkGenerator.setChannel("SMS");
-        linkGenerator.setReferrerName("TheKing");
+        linkGenerator.setReferrerName(username);
         linkGenerator.addParameter("af_sub1", "jeans_men");
         linkGenerator.addParameter("item_id", currentChoice);
         CreateOneLinkHttpTask.ResponseListener listener = new CreateOneLinkHttpTask.ResponseListener() {

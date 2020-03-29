@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 int targetId = getResources().getIdentifier(targetSectionTag, "id", getPackageName());
                 Bundle dp_args = new Bundle();
                 dp_args.putString("item_id", conversionData.get("item_id"));
+                dp_args.putString("referrer_name", conversionData.containsKey("af_referrer_name") ? conversionData.get("af_referrer_name") : "");
                 try {
                     Navigation.findNavController(MainActivity.this, R.id.my_nav_host_fragment)
                             .createDeepLink()
