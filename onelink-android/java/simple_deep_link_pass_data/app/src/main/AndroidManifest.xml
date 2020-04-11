@@ -19,6 +19,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup"
         tools:replace="android:fullBackupContent">
+        <activity android:name=".peachesActivity"></activity>
         <activity android:name=".bananasActivity" />
         <activity android:name=".applesActivity" />
         <activity
