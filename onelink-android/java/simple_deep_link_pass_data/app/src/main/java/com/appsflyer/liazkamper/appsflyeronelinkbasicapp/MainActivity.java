@@ -4,6 +4,7 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -76,5 +77,15 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(LOG_TAG, "error onAttributionFailure : " + errorMessage);
             }
         });
+    }
+
+    public void goToApples(View view) {
+        Intent intent = new Intent(this, applesActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToBananas(View view) {
+        Intent intent = new Intent(this, bananasActivity.class);
+        startActivity(intent);
     }
 }

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AppsflyerOnelinkBasicApp</string>
+    <string name="apples_str">Apples</string>
+    <string name="bananas_str">Bananas</string>
 </resources>
