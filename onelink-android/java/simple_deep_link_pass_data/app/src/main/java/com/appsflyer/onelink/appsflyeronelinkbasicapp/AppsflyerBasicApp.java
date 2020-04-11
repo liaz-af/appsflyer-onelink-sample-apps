@@ -1,4 +1,4 @@
-package com.appsflyer.liazkamper.appsflyeronelinkbasicapp;
+package com.appsflyer.onelink.appsflyeronelinkbasicapp;
 
 import android.app.Application;
 

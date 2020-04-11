@@ -1,4 +1,4 @@
-package com.appsflyer.liazkamper.appsflyeronelinkbasicapp;
+package com.appsflyer.onelink.appsflyeronelinkbasicapp;
 
 import android.app.PendingIntent;
 import android.content.Intent;
@@ -14,7 +14,7 @@ import com.appsflyer.AppsFlyerLib;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.appsflyer.liazkamper.appsflyeronelinkbasicapp.AppsflyerBasicApp.LOG_TAG;
+import static com.appsflyer.onelink.appsflyeronelinkbasicapp.AppsflyerBasicApp.LOG_TAG;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -86,6 +86,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToBananas(View view) {
         Intent intent = new Intent(this, bananasActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToPeaches(View view) {
+        Intent intent = new Intent(this, peachesActivity.class);
         startActivity(intent);
     }
 }
